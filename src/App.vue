@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <HeaderLayout title="Tarot Online" />
+    <HomePage />
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderLayout from "@/components/HeaderLayout.vue";
+import HomePage from "@/components/HomePage.vue";
+import { ref, onMounted } from "vue";
+import { supabase } from "@/supabase";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HeaderLayout,
+    HomePage,
+  },
+  setup() {
+    const products = ref([]);
+    onMounted(async () => {
+      const { data } = await supabase.from("product").select();
+      products.value = data;
+    });
+    return { products };
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
