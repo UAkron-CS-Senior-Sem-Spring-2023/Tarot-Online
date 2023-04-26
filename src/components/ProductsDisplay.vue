@@ -1,6 +1,6 @@
- <template>
+<template>
     <div>
-      <h1>Welcome to our Online Store!</h1>
+      <!-- <h1>Welcome to our Online Store!</h1> -->
       <div class="product-cards" v-if="products">
         <div v-for="product in products" :key="product.id">
           <div class="product-card">

@@ -8,7 +8,7 @@
 
 <script>
 import HeaderLayout from "@/components/HeaderLayout.vue";
-import HomePage from "@/components/HomePage.vue";
+import HomePage from "@/views/HomePage.vue";
 import { ref, onMounted } from "vue";
 import { supabase } from "@/supabase";
 
