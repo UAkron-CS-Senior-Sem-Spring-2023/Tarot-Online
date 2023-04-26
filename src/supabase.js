@@ -1,3 +1,5 @@
+// This the import for Supabase
+
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = 'https://ldeqdetkgejadnyobnji.supabase.co'

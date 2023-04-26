@@ -32,6 +32,7 @@
     border: 1px solid #ddd;
     padding: 1rem;
     margin-bottom: 1rem;
+    max-width: 50%
   }
   
   .product-image img {

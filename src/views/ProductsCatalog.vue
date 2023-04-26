@@ -1,3 +1,5 @@
+<!-- This page is what connects the Supabase database to the front end to fetch the products in a vue component -->
+
 <template>
     <div class="products">
       <Product v-for="product in products" :key="product.id" :product-id="product.id" />
@@ -18,7 +20,7 @@
   
       const fetchProducts = async () => {
         const { data, error } = await supabase
-          .from('products')
+          .from('product')
           .select('*')
         if (error) {
           console.log(error)

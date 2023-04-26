@@ -1,3 +1,5 @@
+<!-- component for navbar -->
+  
   <template>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -19,10 +21,13 @@
               <router-link class="nav-link" to="/">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/products">Products</router-link>
+              <router-link class="nav-link" to="/checkout">Buy Now</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/checkout">Checkout</router-link>
+              <router-link class="nav-link" to="/login">Login</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/signup">Sign Up</router-link>
             </li>
           </ul>
         </div>
