@@ -7,17 +7,17 @@ yarn install or npm install
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve or nom run serve
+yarn serve or npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+yarn build (not needed for this project)
 ```
 
 ### Lints and fixes files
 ```
-yarn lint
+yarn lint (should not be needed to run project though)
 ```
 
 ### Customize configuration
